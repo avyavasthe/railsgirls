@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @movie.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@movie.picture_url, :width => 600) if @movie.picture.present? %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @movie.year %>
+</p>
+
+<p>
+  <strong>Director:</strong>
+  <%= @movie.director %>
+</p>
+
+<p>
+  <strong>Trailer:</strong>
+  <%= @movie.trailer %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @movie.rating %>
+</p>
+
+<p>
+  <strong>Imbdlink:</strong>
+  <%= @movie.imbdLink %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>
