@@ -1,0 +1,32 @@
+public void removeFruit (Integer fruitCode) {
+   /* Apple lostFruit = null;
+    Banana lostFruit2 =null;
+        for (Fruit fruit1 : fruitList) {
+            if (fruit1.getFruitCode().equals(fruitCode) && fruit1 == Apple) {
+                lostFruit = (Apple) fruit1;
+                fruitList.remove(lostFruit);
+            }else {
+                lostFruit2 = (Banana) fruit1;
+                fruitList.remove(lostFruit);
+            }
+
+        }
+        System.out.println(fruitCode + "has been removed from the list");*/
+        Iterator<Fruit> iter = fruitList.iterator();
+while (iter.hasNext()) {
+    Fruit f = iter.next();
+    if (f.getFruitCode().equals(fruitCode)) {
+        if (f instanceof Apple) {
+            Apple a = (Apple) f;
+            // ...
+        } else if (f instanceof Banana) {
+            Banana b = (Banana) f;
+            // ...
+        }
+        iter.remove();
+        break;
+        System.out.println(fruitCode + " has been removed from the list");
+    }
+}
+
+    }
